@@ -661,7 +661,6 @@ ul {
 }
 
 .review-form-checkbox {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
 
@@ -673,11 +672,14 @@ ul {
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.checkbox-form {
+    display: inline-flex;
+}
 .review-icon {
     opacity: 0;
 }
 
-input[type="checkbox"]:checked ~ .review-form-checkbox {
+/* input[type="checkbox"]:checked ~ .review-form-checkbox {
     background-color: var(--color-hover);
     border: none;
     fill: var(--secondary-color-logo);
@@ -686,7 +688,17 @@ input[type="checkbox"]:checked
 ~ .review-form-checkbox
 > .review-icon {
     opacity: 1;
+} */
+
+input:checked + span {
+    background-color: var(--accent-color);
+    border: none;
+    fill: var(--secondary-color-logo);
 }
+input:checked ~ .rewiew-form-checkbox > .review-icon {
+    opacity: 1;
+}
+
 .input-policy {
     display: inline-flex;
     align-items: center;
