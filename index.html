@@ -452,11 +452,12 @@
         <div class="subscribe">
           <p class="text-media">Subscribe</p>
           <form class="footer-form">
-            <label class="footer-label" for="">
+            <label class="footer-label" for="user-email">
               <input
                 class="footer-input"
                 type="email"
-                name="user_email"
+                name="user-email"
+                id="user-email"
                 placeholder="E-mail"
                 required
               />
@@ -536,14 +537,14 @@
           </div>
 
           <div class="checkbox-wrap">
+            <input
+              class="visually-hidden input-checkbox"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+            />
             <label class="label-checkbox" for="user-privacy">
-              <input
-                class="visually-hidden input-checkbox"
-                type="checkbox"
-                name="user-privacy"
-                id="user-privacy"
-                value="true"
-              />
               <span class="review-form-checkbox">
                 <svg class="review-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-vector"></use>
